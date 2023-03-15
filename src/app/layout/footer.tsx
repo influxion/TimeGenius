@@ -1,4 +1,5 @@
 import React from "react"
+import Hydrate from "../hydrate"
 
 const Footer = () => {
   return (
@@ -6,6 +7,7 @@ const Footer = () => {
       <span>
         Copyright © {new Date().getFullYear()}. INFLUXED. All rights reserved.
       </span>
+      <Hydrate />
       <div className="flex gap-3">
         <a href="https://github.com/influxion" rel="noreferrer" target="_blank">
           Github <i className="fa-brands fa-github"></i>
