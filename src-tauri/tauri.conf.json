@@ -4,7 +4,7 @@
     "beforeDevCommand": "npm run next-start",
     "devPath": "http://localhost:3000",
     "distDir": "../dist",
-    "withGlobalTauri": false
+    "withGlobalTauri": true
   },
   "package": {
     "productName": "desktopapp",
@@ -12,7 +12,17 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": true,
+      "fs": {
+        "all": true,
+        "scope": ["$APPDATA/*", "$HOME/*", "**"]
+      },
+      "path": {
+        "all": true
+      },
+      "window": {
+        "all": true
+      },
       "globalShortcut": {
         "all": true
       },
@@ -30,7 +40,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "io.influxed",
       "targets": "all"
     },
     "security": {
@@ -43,9 +53,9 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "desktopapp",
-        "width": 800,
-        "height": 600
+        "title": "INFLUXED | Time Management",
+        "width": 1080,
+        "height": 748
       }
     ]
   }
