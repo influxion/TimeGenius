@@ -19,9 +19,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["src", "next.config.js"],
+  "include": ["src", "next.config.js", ".next/types/**/*.ts", "public/pages"],
   "references": [
     {
       "path": "./tsconfig.node.json"
